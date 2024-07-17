@@ -1,0 +1,62 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*  */
+
+
+
+header {
+    background-color: lightblue;
+    border: solid 3px darkblue  ;
+    height: 15vh;
+}
+
+.board {
+    display: flex;
+    height: 70vh;
+    border: solid 3px darkblue  ;
+    border-top: none;
+}
+
+.section {
+    width: calc(100%/3);
+    border: solid 1px darkblue  ;
+    text-align: center;
+    padding: 10px;
+}
+
+.section h2 {
+    background-color: lightgrey;
+    border: 1px solid blue;
+    margin: 0 20px;
+}
+
+.modal {
+    
+}
+
+footer {
+    padding: 10px;
+    height: 15vh;
+    border: solid 1px darkblue  ;
+}
+
+@media screen and (max-width: 600px) {
+    header {
+      background: #772014;
+    }
+    .board {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .section {
+        width: 100%;
+        margin-bottom: 10px;
+        height: calc(100%/3);
+    }
+  }
