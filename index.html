@@ -44,7 +44,7 @@
         <button>boton desplegable</button>
     </footer>
     
-    <!-- Modal bootstrap -->
+    <!-- New task modal bootstrap -->
     <div class="modal fade" id="newTaskModal" tabindex="-1" aria-labelledby="newTaskModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -62,7 +62,7 @@
                 <label for="description-text" class="col-form-label">Description:</label>
                 <textarea class="form-control" id="description-text"></textarea>
               </div>
-              <p id="blank-title-error"></p>
+              <p id="blank-title-error" class="error"></p>
             </form>
           </div>
           <div class="modal-footer">
@@ -73,6 +73,36 @@
       </div>
     </div>
 
+    <!-- Edit task modal bootstrap -->
+    <div class="modal fade" id="edit-task-modal" tabindex="-1" aria-labelledby="editTaskModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="editTaskModalLabel">Edit Task</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p id="taskId" style="display: none;"></p> <!-- Add this line -->
+            <!-- Add your form fields here -->
+            <form>
+              <div class="mb-3">
+                <label for="title-name" class="col-form-label">Title:</label>
+                <input type="text" class="form-control" id="edit-name">
+              </div>
+              <div class="mb-3">
+                <label for="description-text" class="col-form-label">Description:</label>
+                <textarea class="form-control" id="edit-text"></textarea>
+              </div>
+              <p id="edit-error" class="error"></p>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" id="save-changes">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
     
 </body>
 </html>

@@ -29,6 +29,13 @@ main {
     flex-direction: column;
 }
 
+footer {
+    height: 15%; /* Adjust percentage as needed */
+    padding: 10px;
+    border: solid 1px darkblue;
+}
+
+/* Classes */
 .board {
     flex: 1; /* This makes .board expand to fill the remaining height of main */
     display: flex;
@@ -73,14 +80,10 @@ main {
     width: 100%;
 }
 
-footer {
-    height: 15%; /* Adjust percentage as needed */
-    padding: 10px;
-    border: solid 1px darkblue;
-}
+
 
 /* IDs */
-#blank-title-error {
+.error {
     color: #772014;
 }
 
