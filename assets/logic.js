@@ -92,34 +92,48 @@ function handleCardClick(event) {
     openEditModal(taskId);
 }
 
-function openEditModal(taskId) {
-    // console.log(taskId)
+function handleSaveChangesClick() {
     const tasksArray = readLocalStorage()
-    //get the index of the task to fill the modal and then replace
+    const taskIndex = tasksArray.findIndex(task => task.ID == currentTaskId)
+    
+    if (editTitleInput.value === tasksArray[taskIndex].title && editDescriptionInput.value === tasksArray[taskIndex].description) {
+        editError.innerText = 'Make a change to save'
+    } else if (editTitleInput.value === '') {
+        editError.innerText = 'Title must not be blank'
+    } else {
+        const editedTask = {
+            ID: currentTaskId,
+            title: editTitleInput.value,
+            description: editDescriptionInput.value,
+            status: tasksArray[taskIndex].status
+        }
+        // Replaces the task with the edited version
+        tasksArray.splice(taskIndex, 1, editedTask)
+        localStorage.setItem('tasks', JSON.stringify(tasksArray))
+        renderTasks()
+        editTaskModal.hide()
+    }
+}
+
+// Variable to store the current task ID globally
+let currentTaskId
+
+// Open edit modal and attach the event listener
+function openEditModal(taskId) {
+    currentTaskId = taskId // Set the current task ID
+    const tasksArray = readLocalStorage()
     const taskIndex = tasksArray.findIndex(task => task.ID == taskId)
+    
     editTitleInput.value = tasksArray[taskIndex].title
     editDescriptionInput.value = tasksArray[taskIndex].description
-
-    // Show the modal 
+    
+    // Show the modal
     editTaskModal.show()
-
-    saveChangesBtn.addEventListener('click', () => {
-        if (editTitleInput.value === tasksArray[taskIndex].title && editDescriptionInput.value === tasksArray[taskIndex].description) {
-            editError.innerText = 'Make a change to save'
-        } else if (editTitleInput.value === '') {
-            editError.innerText = 'Title must not be blank'
-        } else {
-            editedTask = {
-                ID: taskId,
-                title: editTitleInput.value,
-                description: editDescriptionInput.value,
-                status: tasksArray[taskIndex].status
-            }
-            // replaces the task with the edited version
-            tasksArray.splice(taskIndex, 1, editedTask)
-            localStorage.setItem('tasks', JSON.stringify(tasksArray))
-            renderTasks()
-            editTaskModal.hide()
-        }
-    })
+    
+    // Remove existing event listener before adding a new one so if we display an error we can try again
+    saveChangesBtn.removeEventListener('click', handleSaveChangesClick)
+    saveChangesBtn.addEventListener('click', handleSaveChangesClick)
+    
+    // Clear previous error message
+    editError.innerText = ''
 }
