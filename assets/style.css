@@ -1,32 +1,60 @@
 *,
 *:before,
 *:after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-/*  */
 
+/* Typo */
 
+/* Elements */
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
 
 header {
     background-color: lightblue;
-    border: solid 3px darkblue  ;
-    height: 15vh;
+    border: solid 3px darkblue;
+    height: 15%; /* Adjust percentage as needed */
+}
+
+main {
+    height: 70%; /* Adjust percentage as needed */
+    border: solid 3px darkblue;
+    border-top: none;
+    display: flex;
+    flex-direction: column;
 }
 
 .board {
+    flex: 1; /* This makes .board expand to fill the remaining height of main */
     display: flex;
-    height: 70vh;
-    border: solid 3px darkblue  ;
-    border-top: none;
+    border: solid 3px darkblue;
+    overflow: hidden;
 }
 
 .section {
-    width: calc(100%/3);
-    border: solid 1px darkblue  ;
+    width: calc(100% / 3);
+    height: 100%;
     text-align: center;
+    flex-shrink: 0; /* Prevents the section from shrinking below its content */
+    border-right: 2px solid darkblue; /* Add right border between sections */
+    display: flex; /*Ensure .section is a flex container */
+    flex-direction: column; /*Arrange children in a column */
+    /* justify-content: center; */
+    align-items: center;
+
+    overflow-y: auto; /* Use auto to show scrollbar when necessary */
     padding: 10px;
+    max-height: 100%; /* Adjust height as needed */
+    height: 100%; /* Ensure full height */
+    /* width: 100%; */
+}
+.section:last-child {
+    border-right: none; /* Remove border on the last .section element */
 }
 
 .section h2 {
@@ -35,19 +63,31 @@ header {
     margin: 0 20px;
 }
 
-.modal {
-    
+.section button {
+    /* width: 15px; */
+    justify-self: center;
+    margin: 10px;
+}
+
+.tasks-column {
+    width: 100%;
 }
 
 footer {
+    height: 15%; /* Adjust percentage as needed */
     padding: 10px;
-    height: 15vh;
-    border: solid 1px darkblue  ;
+    border: solid 1px darkblue;
 }
 
+/* IDs */
+#blank-title-error {
+    color: #772014;
+}
+
+/* media */
 @media screen and (max-width: 600px) {
     header {
-      background: #772014;
+        background: #772014;
     }
     .board {
         flex-direction: column;
@@ -57,6 +97,6 @@ footer {
     .section {
         width: 100%;
         margin-bottom: 10px;
-        height: calc(100%/3);
+        height: calc(100% / 3);
     }
-  }
+}
