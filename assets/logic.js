@@ -56,7 +56,7 @@ addTaskButton.addEventListener('click', () => {
 function cardBuilder(data) {
     // to change colors check https://getbootstrap.com/docs/5.3/components/card/#background-and-color
     const newCard = document.createElement('div')
-    newCard.classList.add('card', 'text-bg-primary', 'mb-3')
+    newCard.classList.add('card', 'text-bg-primary', 'mb-3', 'clickable')
     // Use ID to later locate and edit card
     newCard.setAttribute('data-task-id', data.ID)
     // TODO implement drag and drop

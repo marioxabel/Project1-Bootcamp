@@ -30,7 +30,7 @@ main {
 }
 
 footer {
-    height: 15%; /* Adjust percentage as needed */
+    height: 5%; /* Adjust percentage as needed */
     padding: 10px;
     border: solid 1px darkblue;
 }
@@ -76,10 +76,17 @@ footer {
     margin: 10px;
 }
 
+.archive {
+    height: 10%;
+}
+
 .tasks-column {
     width: 100%;
 }
 
+.clickable {
+    cursor: pointer;
+}
 
 
 /* IDs */
