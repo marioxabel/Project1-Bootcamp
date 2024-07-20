@@ -29,6 +29,15 @@ main {
     flex-direction: column;
 }
 
+footer {
+    height: 5%; /* Adjust percentage as needed */
+    padding: 10px;
+    border: solid 1px darkblue;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Classes */
 .board {
     flex: 1; /* This makes .board expand to fill the remaining height of main */
     display: flex;
@@ -46,7 +55,6 @@ main {
     flex-direction: column; /*Arrange children in a column */
     /* justify-content: center; */
     align-items: center;
-
     overflow-y: auto; /* Use auto to show scrollbar when necessary */
     padding: 10px;
     max-height: 100%; /* Adjust height as needed */
@@ -69,20 +77,30 @@ main {
     margin: 10px;
 }
 
+.archive {
+    height: 10%;
+    overflow: hidden;
+    overflow-y: auto; 
+}
+
 .tasks-column {
     width: 100%;
 }
 
-footer {
-    height: 15%; /* Adjust percentage as needed */
-    padding: 10px;
-    border: solid 1px darkblue;
+.clickable {
+    cursor: pointer;
+}
+
+.error {
+    color: #772014;
 }
 
 /* IDs */
-#blank-title-error {
-    color: #772014;
+
+#delete-all {
+    font-size: 10px;
 }
+
 
 /* media */
 @media screen and (max-width: 600px) {
