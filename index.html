@@ -48,10 +48,11 @@
   <div class="archive">
     <h2>Archive</h2>
     <button>boton desplegable</button>
+    <div id="archived-section"></div>
   </div>
 
   <footer>
-    <p>made by team 1</p>
+    <p>made by team 1</p> <button type="button" class="btn btn-danger" id="delete-all">Delete all tasks</button>
   </footer>
 
   <!-- New task modal bootstrap -->
@@ -71,6 +72,15 @@
             <div class="mb-3">
               <label for="description-text" class="col-form-label">Description:</label>
               <textarea class="form-control" id="description-text"></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="status">Choose a status:</label>
+              <select name="status" id="status">
+                <option value="To-do" selected="selected">To-do</option>
+                <option value="In-progress">In-progress</option>
+                <option value="Completed">Completed</option>
+                <option value="Archived">Archived</option>
+              </select>
             </div>
             <p id="blank-title-error" class="error"></p>
           </form>
@@ -102,6 +112,15 @@
             <div class="mb-3">
               <label for="description-text" class="col-form-label">Description:</label>
               <textarea class="form-control" id="edit-text"></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="edit-status">Choose a status:</label>
+              <select name="edit-status" id="edit-status">
+                <option value="To-do">To-do</option>
+                <option value="In-progress">In-progress</option>
+                <option value="Completed">Completed</option>
+                <option value="Archived">Archived</option>
+              </select>
             </div>
             <p id="edit-error" class="error"></p>
           </form>

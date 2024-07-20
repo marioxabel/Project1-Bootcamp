@@ -33,6 +33,8 @@ footer {
     height: 5%; /* Adjust percentage as needed */
     padding: 10px;
     border: solid 1px darkblue;
+    display: flex;
+    justify-content: space-around;
 }
 
 /* Classes */
@@ -53,7 +55,6 @@ footer {
     flex-direction: column; /*Arrange children in a column */
     /* justify-content: center; */
     align-items: center;
-
     overflow-y: auto; /* Use auto to show scrollbar when necessary */
     padding: 10px;
     max-height: 100%; /* Adjust height as needed */
@@ -78,6 +79,8 @@ footer {
 
 .archive {
     height: 10%;
+    overflow: hidden;
+    overflow-y: auto; 
 }
 
 .tasks-column {
@@ -88,11 +91,16 @@ footer {
     cursor: pointer;
 }
 
-
-/* IDs */
 .error {
     color: #772014;
 }
+
+/* IDs */
+
+#delete-all {
+    font-size: 10px;
+}
+
 
 /* media */
 @media screen and (max-width: 600px) {
