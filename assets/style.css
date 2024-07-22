@@ -6,7 +6,18 @@
     box-sizing: border-box;
 }
 
+:root {
+
+    --main-color:#A9BDA1;
+    --secondary-color: #b5c6ea;
+    --neutral-color: #cacaca;
+    --borders1: #5a6c52;
+}
+
+
+
 /* Typo */
+
 
 /* Elements */
 body, html {
@@ -16,80 +27,202 @@ body, html {
 }
 
 header {
-    background-color: lightblue;
-    border: solid 3px darkblue;
-    height: 15%; /* Adjust percentage as needed */
+    background-color: var(--main-color);
+    color: white;
+    height: 10%; /* Adjust percentage as needed */ /*changed*/
+}
+
+header h1 {
+
+    position: relative;
+    font-size: 35px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 20px;
+    padding-left: 3pc;
+    
+
 }
 
 main {
     height: 70%; /* Adjust percentage as needed */
-    border: solid 3px darkblue;
+    /* border: solid 4px var(--borders); */
     border-top: none;
     display: flex;
     flex-direction: column;
+
 }
 
+
+
+
 footer {
-    height: 5%; /* Adjust percentage as needed */
-    padding: 10px;
-    border: solid 1px darkblue;
+    height: 9%; /* Adjust percentage as needed */
+    background-color: var(--secondary-color);
+    border: 3px solid var(--neutral-color);
+    font-weight: bold;
+    color: var(--borders1);
+    /* padding: 10px; */
+    /* padding-top: 10px; */
     display: flex;
     justify-content: space-around;
 }
+
+footer p {
+
+    padding-top: 25px;
+}
+
+
 
 /* Classes */
 .board {
     flex: 1; /* This makes .board expand to fill the remaining height of main */
     display: flex;
-    border: solid 3px darkblue;
-    overflow: hidden;
+    margin-bottom: 10px;
+    padding-right: 0px;
+    /* overflow: hidden;  */
 }
 
 .section {
-    width: calc(100% / 3);
-    height: 100%;
+
+    width: calc((100% / 3.1));
+    /* height: 100%; */
     text-align: center;
     flex-shrink: 0; /* Prevents the section from shrinking below its content */
-    border-right: 2px solid darkblue; /* Add right border between sections */
+    /* background-color: #fefbf7; */
+    /*border-right: 4px dashed var(--borders);  Add right border between sections */
     display: flex; /*Ensure .section is a flex container */
     flex-direction: column; /*Arrange children in a column */
     /* justify-content: center; */
     align-items: center;
     overflow-y: auto; /* Use auto to show scrollbar when necessary */
     padding: 10px;
+    margin-right: 5px;
     max-height: 100%; /* Adjust height as needed */
     height: 100%; /* Ensure full height */
+    
     /* width: 100%; */
 }
 .section:last-child {
     border-right: none; /* Remove border on the last .section element */
+    
 }
 
-.section h2 {
-    background-color: lightgrey;
-    border: 1px solid blue;
-    margin: 0 20px;
+/* how to make a column of to do a proper border */
+.to-do {
+    border: 4px solid #787878;
+    border-radius: 10px;
+    margin: 5px;
+    margin-right: 1px;
 }
+
+.in-progress {
+
+    border: 4px solid #eec73a;
+    border-radius: 10px;
+    margin: 5px;
+    margin-right: 1px;
+
+}
+
+.completed {
+
+    border: 4px solid #2b9e55;
+    border-radius: 10px;
+    border-right: #772014;
+    margin: 5px;
+    margin-right: 1px;
+
+}
+
+
+.section h2 {
+    background-color: var(--neutral-color);
+    border: 2px solid var(--borders);
+    border-radius: 5px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 22px;
+    color: white;
+    padding: 10px 20px;
+    border: 30px;
+    margin: 20px;
+    margin-top: 15px;
+}
+
+
 
 .section button {
     /* width: 15px; */
     justify-self: center;
     margin: 10px;
+    background-color: var(--neutral-color);
+    border: #c8c8c8;
 }
 
+
+
 .archive {
-    height: 10%;
+    height: 20%;
+    padding-left: 15px;
+    padding-top: 7px;
     overflow: hidden;
     overflow-y: auto; 
+    background-color: var(--secondary-color);
+    opacity: 60%;
+    display: inline-flexbox;
 }
+
+.archive h2 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: oblique;
+    color: #3d5cab;
+    border-bottom: 3px dashed #3d5cab;
+    width: 12%;
+
+}
+
+/* Changing card interior look */
+
+.card-body {
+
+text-align: left;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+border: 2px dotted white;
+border-radius: 5px;
+margin: 3px;
+}
+
+.card-title {
+
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+font-weight: bold;
+color: white;
+border-bottom: 4px dotted #ffffff;
+width: 75%;
+
+}
+
+.card-text {
+
+    font-style: oblique;
+    color: white;
+}
+
 
 .tasks-column {
     width: 100%;
 }
 
+.btn-primary {
+    color: black;
+    background-color: white;
+    border: 1px solid var(--borders1);
+}
+
 .clickable {
     cursor: pointer;
 }
+
 
 .error {
     color: #772014;
@@ -98,7 +231,16 @@ footer {
 /* IDs */
 
 #delete-all {
-    font-size: 10px;
+   
+    margin-top: 20px;
+    margin-right: 5px;
+    width: 15%;
+    font-size: 15px;
+    height: 50%;
+    background-color: white;
+    border: 1px solid red;
+    color: red
+
 }
 
 
