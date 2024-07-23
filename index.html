@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>Ma
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Bootstrap CSS -->
@@ -46,40 +46,24 @@
 
   </main>
   <div class="archive">
-    <h2>archive</h2>
+    <div id="archive-title">
 
-<!-- Option 1: collpase text-->
-    <p>
-      <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
-        See all tasks
-      </button>
-    </p>
+      <h2>archive</h2>
+  
+  <!-- Option 1: collpase text-->
+    
+        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+          See all tasks
+        </button>
+    </div>
+  
     <div style="min-height: 120px;">
       <div class="collapse collapse-horizontal" id="collapseWidthExample">
-        <div class="card card-body" style="width: 300px;">
-          This is some placeholder content for a horizontal collapse. It's hidden by default and shown when triggered.
+        <div  id="archived-section">
         </div>
       </div>
     </div>
-
-    <!-- Option 3: accordion
-    <div class="accordion" id="accordionExample">
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-            Accordion Item #1
-          </button>
-        </h2>
-        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-          </div>
-        </div>
-      </div> -->
-
-    <button>boton desplegable</button> 
-    <div id="archived-section"></div> 
-    
+   
   </div>
 
   <footer>
