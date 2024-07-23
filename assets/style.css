@@ -8,55 +8,56 @@
 
 :root {
 
-    --main-color:#A9BDA1;
+    --main-color: #A9BDA1;
     --secondary-color: #b5c6ea;
     --neutral-color: #cacaca;
     --borders1: #5a6c52;
 }
 
 
-
 /* Typo */
 
 
 /* Elements */
-body, html {
+body,
+html {
     height: 100%;
     margin: 0;
-    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
 
 header {
     background-color: var(--main-color);
     color: white;
-    height: 10%; /* Adjust percentage as needed */ /*changed*/
+    height: 10%;
+    /* Adjust percentage as needed */
+    /*changed*/
 }
 
 header h1 {
 
     position: relative;
     font-size: 35px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     padding: 20px;
     padding-left: 3pc;
-    
+
 
 }
 
 main {
-    height: 70%; /* Adjust percentage as needed */
-    /* border: solid 4px var(--borders); */
-    border-top: none;
+    height: 70%;
+    /* Adjust percentage as needed */
     display: flex;
     flex-direction: column;
-
 }
 
 
 
 
 footer {
-    height: 9%; /* Adjust percentage as needed */
+    height: 5%;
+    /* Adjust percentage as needed */
     background-color: var(--secondary-color);
     border: 3px solid var(--neutral-color);
     font-weight: bold;
@@ -64,83 +65,54 @@ footer {
     /* padding: 10px; */
     /* padding-top: 10px; */
     display: flex;
-    justify-content: space-around;
+    justify-content: space-around; /* Center the elements horizontally */
 }
 
-footer p {
-
-    padding-top: 25px;
+footer p, footer button {
+    align-self: center;
+    margin: 0;
 }
-
 
 
 /* Classes */
 .board {
-    flex: 1; /* This makes .board expand to fill the remaining height of main */
+    flex: 1;
+    /* This makes .board expand to fill the remaining height of main */
     display: flex;
-    margin-bottom: 10px;
-    padding-right: 0px;
-    /* overflow: hidden;  */
+    width: 100%;
+    overflow: hidden;
+    padding: 10px;
 }
 
 .section {
-
-    width: calc((100% / 3.1));
-    /* height: 100%; */
+    width: calc((100% / 3) - 7px);
     text-align: center;
-    flex-shrink: 0; /* Prevents the section from shrinking below its content */
-    /* background-color: #fefbf7; */
-    /*border-right: 4px dashed var(--borders);  Add right border between sections */
-    display: flex; /*Ensure .section is a flex container */
-    flex-direction: column; /*Arrange children in a column */
+    flex-shrink: 0;
+    /* Prevents the section from shrinking below its content */
+    display: flex;
+    /*Ensure .section is a flex container */
+    flex-direction: column;
+    /*Arrange children in a column */
     /* justify-content: center; */
     align-items: center;
-    overflow-y: auto; /* Use auto to show scrollbar when necessary */
+    overflow-y: auto;
+    /* Use auto to show scrollbar when necessary */
     padding: 10px;
-    margin-right: 5px;
-    max-height: 100%; /* Adjust height as needed */
-    height: 100%; /* Ensure full height */
-    
-    /* width: 100%; */
+    max-height: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border: 4px solid;
+    margin-right: 10px;
 }
+
 .section:last-child {
-    border-right: none; /* Remove border on the last .section element */
-    
+    margin-right: 0;
 }
-
-/* how to make a column of to do a proper border */
-.to-do {
-    border: 4px solid #787878;
-    border-radius: 10px;
-    margin: 5px;
-    margin-right: 1px;
-}
-
-.in-progress {
-
-    border: 4px solid #eec73a;
-    border-radius: 10px;
-    margin: 5px;
-    margin-right: 1px;
-
-}
-
-.completed {
-
-    border: 4px solid #2b9e55;
-    border-radius: 10px;
-    border-right: #772014;
-    margin: 5px;
-    margin-right: 1px;
-
-}
-
 
 .section h2 {
     background-color: var(--neutral-color);
     border: 2px solid var(--borders);
     border-radius: 5px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 22px;
     color: white;
     padding: 10px 20px;
@@ -149,10 +121,7 @@ footer p {
     margin-top: 15px;
 }
 
-
-
 .section button {
-    /* width: 15px; */
     justify-self: center;
     margin: 10px;
     background-color: var(--neutral-color);
@@ -160,23 +129,36 @@ footer p {
 }
 
 
+/* how to make a column of to do a proper border */
+.to-do {
+    border-color: #787878;
+}
+
+.in-progress {
+    border-color: #eec73a;
+}
+
+.completed {
+    border-color: #2b9e55;
+ }
+
 
 .archive {
-    height: 20%;
+    height: 15%;
     padding-left: 15px;
-    padding-top: 7px;
+    /* padding-top: 7px; */
     overflow: hidden;
-    overflow-y: auto; 
+    overflow-y: auto;
     background-color: var(--secondary-color);
     opacity: 60%;
     display: inline-flexbox;
 }
 
 .archive h2 {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
     font-style: oblique;
     color: #3d5cab;
-    border-bottom: 3px dashed #3d5cab;
+    /* border-bottom: 3px dashed #3d5cab; */
     width: 12%;
 
 }
@@ -185,20 +167,17 @@ footer p {
 
 .card-body {
 
-text-align: left;
-font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-border: 2px dotted white;
-border-radius: 5px;
-margin: 3px;
+    text-align: left;
+    /* border: 2px dotted white; */
+    border-radius: 5px;
+    margin: 3px;
 }
 
 .card-title {
-
-font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-font-weight: bold;
-color: white;
-border-bottom: 4px dotted #ffffff;
-width: 75%;
+    font-weight: bold;
+    color: white;
+    border-bottom: 1px solid #ffffff;
+    width: 75%;
 
 }
 
@@ -230,25 +209,33 @@ width: 75%;
 
 /* IDs */
 
+#archived-section {
+    display: flex;
+    flex-basis: 0;
+    flex-wrap: wrap;
+}
+
+#archived-section .card {
+    max-width: 500px;
+    flex-shrink: 0; /*Prevents the card from shrinking beyond max-width */
+    width: 100%; /* Ensures the card takes the full width available up to max-width */
+    margin:  10px;
+}
+
 #delete-all {
-   
-    margin-top: 20px;
-    margin-right: 5px;
-    width: 15%;
-    font-size: 15px;
-    height: 50%;
+    font-size: 13px;
     background-color: white;
     border: 1px solid red;
     color: red
-
 }
 
 
 /* media */
 @media screen and (max-width: 600px) {
-    header {
-        background: #772014;
+     header h1 {
+        font-size: 30px;
     }
+
     .board {
         flex-direction: column;
         padding: 10px;
@@ -258,5 +245,9 @@ width: 75%;
         width: 100%;
         margin-bottom: 10px;
         height: calc(100% / 3);
+    }
+
+    #delete-all {
+        width: 35%;
     }
 }
