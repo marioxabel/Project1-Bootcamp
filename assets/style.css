@@ -45,9 +45,22 @@ header h1 {
 
 }
 
+/*config of the date as header*/
+.date-header {
+  background-color: var(--main-color);
+  color: white;
+  height: 5%;
+  display: flex;
+  align-items: center;
+}
+
+.date-header h1 {
+  font-size: 20px;
+}
+
+
 main {
     height: 70%;
-    /* Adjust percentage as needed */
     display: flex;
     flex-direction: column;
 }
@@ -57,7 +70,6 @@ main {
 
 footer {
     height: 5%;
-    /* Adjust percentage as needed */
     background-color: var(--secondary-color);
     border: 3px solid var(--neutral-color);
     font-weight: bold;
