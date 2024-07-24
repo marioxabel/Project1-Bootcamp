@@ -1,31 +1,27 @@
 # Kanban Board
 
-**Project description
-This is a ...
+This project was created for the coding bootcamp at Tecnológico de Monterrey.
 
 ## Table of contents
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
+  - [Preview](#preview)
   - [Links](#links)
-- [My process](#my-process)
+- [Our process](#our-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
 ### The challenge
 
-- Build out the project to the designs provided
+“As a student, I want to organize my time in a way that all of my chores fit up in my schedule, track my process and visualize all of my tasks.”
 
-### Screenshot
+### Preview
 
 ![App screenshot](./assets/app-screenshot.png)
 
@@ -33,7 +29,8 @@ This is a ...
 
 - Live Site URL: [github pages deploy](https://marioxabel.github.io/Project1-Bootcamp/)
 
-## My process
+## Our process
+We initiated the project by coding the HTML structure and incorporating basic CSS styling. Additionally, we decided to utilize the Bootstrap library for modals and buttons on the webpage. Upon completing the basic structure, we introduced interactivity to the application using JavaScript. This involved implementing functions that allowed users to add new tasks, save them locally using local storage, and render the tasks as cards. Subsequently, we enhanced the application with more advanced logic, including the ability to edit tasks and more sophisticated styling to ensure responsiveness across different screen sizes.
 
 ### Built with
 
@@ -47,51 +44,33 @@ This is a ...
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+We reinforced our knowledge about web development learned trought the bootcamp experience. We used technologies like HTML, CSS, JavaScript and libraries like Bootstrap implementing modals and bootstrap native functions to develop our first project and adapted our code to have a responsive design. In addition we practiced our team work skills by using github repositories to code our app. 
 
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+FRONT-END ENHANCEMENTS:
+- Task Details like priority and date
+- Notifications and Reminders
+- Customizable Columns
+- Personalized Login
+- Drag and drop feature
+- Task timers
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+BACK-END ENHANCEMENTS:
+- Data Backup and Recovery
+- Performance Optimization
+- Responsive features
+
 
 ### Useful resources
 
-- [Bootstrap docs](https://getbootstrap.com/) - This helped us to understand how bootstrap works 
+- [Bootstrap documentation](https://getbootstrap.com/)
 
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [MDN documentation](https://developer.mozilla.org/es/)
 
 ## Authors
 
 - [Majo Alvarez](https://github.com/MajoAlvarezcode)
 - [Bryanna Macias](https://github.com/Bryanna-Macias)
 - [Mario](https://github.com/marioxabel)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
