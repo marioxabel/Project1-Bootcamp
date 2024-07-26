@@ -27,7 +27,7 @@ This project was created for the coding bootcamp at Tecnológico de Monterrey.
 
 ### Links
 
-- Live Site URL: [github pages deploy](https://marioxabel.github.io/Project1-Bootcamp/)
+- Live Site URL: [github pages deploy](https://marioxabel.github.io/Running-tasks/)
 
 ## Our process
 We initiated the project by coding the HTML structure and incorporating basic CSS styling. Additionally, we decided to utilize the Bootstrap library for modals and buttons on the webpage. Upon completing the basic structure, we introduced interactivity to the application using JavaScript. This involved implementing functions that allowed users to add new tasks, save them locally using local storage, and render the tasks as cards. Subsequently, we enhanced the application with more advanced logic, including the ability to edit tasks and more sophisticated styling to ensure responsiveness across different screen sizes.
